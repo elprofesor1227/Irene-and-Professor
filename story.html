@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Love Story</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Dancing Script', cursive;
+      background-color: #8dbee1;
+      color: #333;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 1em;
+      color: #34495e;
+    }
+    .timeline {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.4);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    .event {
+      margin-bottom: 2rem;
+    }
+    .event h2 {
+      color: #2c3e50;
+    }
+    .event p {
+      font-size: 1.2em;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 15px;
+      margin-top: 1rem;
+    }
+    a, button {
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      color: #fff;
+      background: #34495e;
+      padding: 0.7em 1.5em;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    #chatImage {
+      display: none;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Our Story 💖</h1>
+  <div class="timeline">
+    <div class="event">
+      <h2>3rd December 2023</h2>
+      <p>I had a terrible dream where I saw myself alone. There was one girl who was wearing a blue suit. She looked concerned for me. I didn't know her name but her name started with A and surname was Patwal.</p>
+    </div>
+    <div class="event">
+      <h2>18th March 2025</h2>
+      <p>I was at the gym when my dad sent me a text. The name of the girl in the text was Ayushi Patwal. I couldn't believe it and was skeptical.</p>
+    </div>
+    <div class="event">
+      <h2>21st March 2025</h2>
+      <p>We texted for the first time and it set off a chain of beautiful events.</p>
+    </div>
+  </div>
+
+  <button onclick="showChat()">Our First Chat 💬</button>
+  <div id="chatImage">
+    <img src="img/chat1.jpg" alt="Our First Chat">
+  </div>
+
+  <br>
+  <a href="index.html">Back to Home 🏠</a>
+  <a href="reasons.html">Reasons to Love You 💖</a>
+
+  <script>
+    function showChat() {
+      document.getElementById('chatImage').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

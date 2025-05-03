@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Knight</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Dancing Script', cursive;
+      background-color: #b19cd9;
+      overflow: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      color: white;
+      margin: 1rem 0;
+    }
+
+    .scroll-container {
+      width: 100vw;
+      height: calc(100vh - 6rem);
+      overflow: auto;
+      border-top: 2px solid white;
+      position: relative;
+    }
+
+    .zoom-container {
+      transform-origin: top left;
+      transition: transform 0.1s ease-out;
+    }
+
+    .zoom-container img {
+      display: block;
+      max-width: none;
+      height: auto;
+    }
+
+    .nav-buttons {
+      text-align: center;
+      margin: 1rem 0;
+    }
+
+    .nav-buttons a {
+      display: inline-block;
+      margin: 0 1rem;
+      padding: 0.6em 1.5em;
+      background: #fff;
+      color: #b19cd9;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .nav-buttons a:hover {
+      background: #f3e7ff;
+    }
+
+    /* Floating side navigation buttons */
+    .side-buttons {
+      position: fixed;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .side-buttons button {
+      background: #fff;
+      padding: 0.6em 1.5em;
+      border: 1px solid #b19cd9;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .side-buttons button:hover {
+      background: #f3e7ff;
+    }
+
+    /* Scrollbar styling (optional) */
+    .scroll-container::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    .scroll-container::-webkit-scrollbar-track {
+      background: #eee;
+    }
+
+    .scroll-container::-webkit-scrollbar-thumb {
+      background-color: #a583d4;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My love, your kinght is always with you ⚔️</h1>
+
+  <div class="scroll-container" id="scroll-container">
+    <div class="zoom-container" id="zoom-container">
+      <img src="img/knight.jpg" alt="Knight Image">
+    </div>
+  </div>
+
+  <!-- Floating Side Navigation Buttons -->
+  <div class="side-buttons">
+    <button onclick="scrollToTop()">Top</button>
+    <button onclick="scrollToBottom()">Bottom</button>
+  </div>
+
+  <div class="nav-buttons">
+    <a href="index.html">Back to Home 🏠</a>
+    <a href="nh.html">Our Favourite Couple 💖</a>
+    <a href="miss.html">When I Miss You 💌</a> <!-- New Button for miss.html -->
+  </div>
+
+  <script>
+    const zoomContainer = document.getElementById('zoom-container');
+    let scale = 1;
+
+    document.getElementById('scroll-container').addEventListener('wheel', function (e) {
+      if (e.ctrlKey) {
+        e.preventDefault();
+        const zoomSpeed = 0.1;
+        scale += e.deltaY < 0 ? zoomSpeed : -zoomSpeed;
+        scale = Math.max(0.1, Math.min(5, scale));
+        zoomContainer.style.transform = `scale(${scale})`;
+      }
+    });
+
+    // Scroll to top function
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Scroll to bottom function
+    function scrollToBottom() {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>

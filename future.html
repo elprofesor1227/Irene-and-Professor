@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Future Letters</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #CCEBC5;
+      margin: 0;
+      padding: 2rem;
+      font-family: 'Dancing Script', cursive;
+      color: #3e3e3e;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      margin-bottom: 2rem;
+    }
+
+    .letter-container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .letter {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .letter-title {
+      padding: 1rem 1.5rem;
+      font-size: 1.5em;
+      cursor: pointer;
+      background: #9fcfab;
+      color: #2e4b3c;
+      transition: background 0.3s ease;
+    }
+
+    .letter-title:hover {
+      background: #7fbf97;
+    }
+
+    .letter-content {
+      display: none;
+      padding: 1.2rem 1.5rem;
+      font-size: 1.2em;
+      line-height: 1.6em;
+      background: #f9fff9;
+    }
+
+    .active .letter-content {
+      display: block;
+    }
+
+    .nav-buttons {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .nav-buttons a {
+      display: inline-block;
+      margin: 0.8rem;
+      padding: 1em 2em;
+      background-color: #ffffff;
+      color: #4a6e4d;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 1.2em;
+      transition: background 0.3s, color 0.3s;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-buttons a:hover {
+      background-color: #def5e1;
+      color: #365f3d;
+    }
+
+    @media (max-width: 600px) {
+      .letter-title {
+        font-size: 1.3em;
+      }
+
+      .letter-content {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💌 Future Letters for You</h1>
+  <div class="letter-container" id="letters">
+    <div class="letter">
+        <div class="letter-title">💌 Open for our most favourite line.</div>
+        <div class="letter-content">हरे कृष्ण हरे कृष्ण , कृष्ण कृष्ण हरे हरे |<br>
+            हरे राम हरे राम , राम राम हरे हरे || 💖</div>
+      </div>
+<div class="letter">
+  <div class="letter-title">💌 Open when you’ve had a bad day.</div>
+  <div class="letter-content">I wish I could teleport to you right now with ice cream and a hug. Until then, remember: You’re stronger than you think. 💖</div>
+</div>
+<div class="letter">
+  <div class="letter-title">💌 Open when you feel lonely.</div>
+  <div class="letter-content">I’m always with you—even when we’re apart. <a class="song-grid full-span" href="https://open.spotify.com/playlist/37i9dQZF1EJKNEngyODEyl?si=Hw7BaWk2QCuW7H4ZNMg8qg" target="_blank">Here’s a playlist of songs that remind me of us.</a> 🎶</div>
+</div>
+<div class="letter">
+  <div class="letter-title">💌 Open when you need a pep talk.</div>
+  <div class="letter-content">Repeat after me: I am brilliant, beautiful, and deeply loved. (P.S. I’m your #1 fan.) 🌟</div>
+</div>
+<div class="letter">
+  <div class="letter-title">💌 Open on your next birthday.</div>
+  <div class="letter-content">Another year of you = another year of magic. My wish for you? Endless joy. (And cake. Lots of cake.) 🎂</div>
+</div>
+<div class="letter">
+  <div class="letter-title">💌 Open on our anniversary.</div>
+  <div class="letter-content">Remember our first date? I knew then you were my forever. Here’s to a lifetime of ‘remember whens’ and ‘I still do’s. 💑</div>
+</div>
+<div class="letter">
+  <div class="letter-title">💌 Open when we get married.</div>
+  <div class="letter-content">Today, I vowed to love you forever. But darling, I’ve loved you since the moment you came in my life. 💍</div>
+</div>
+<div class="letter">
+  <div class="letter-title">💌 Open when we move in together.</div>
+  <div class="letter-content">Welcome home—to our chaos, our inside jokes, and the life we’ll build. Let’s dance in the kitchen tonight. 🏠</div>
+</div>
+<div class="letter">
+  <div class="letter-title">💌 Open when you’re pregnant.</div>
+  <div class="letter-content">You’re going to be an incredible mom. Our baby is so lucky to have your heart, your laugh, and your warmth. 👶</div>
+</div>
+<div class="letter">
+  <div class="letter-title">💌 Open before our next trip.</div>
+  <div class="letter-content">Pack your bags—and your sense of wonder. This adventure is just another chapter in our great love story. ✈️</div>
+</div>
+<div class="letter">
+  <div class="letter-title">💌 Open when you achieve a big dream.</div>
+  <div class="letter-content">I always knew you’d shine this bright. Celebrate yourself today—I’ll be cheering loudest! 🎉</div>
+</div>
+<div class="letter">
+  <div class="letter-title">💌 Open when we’re old and gray.</div>
+  <div class="letter-content">Look at us—wrinkles, laugh lines, and a love that outlasted time. Still my favorite person. 👵👴</div>
+</div>
+<div class="letter">
+  <div class="letter-title">💌 Open when you’re craving sweets.</div>
+  <div class="letter-content">Redeem this note for 1 emergency sweets delivery. (I owe you a Ras Malai!) 🍬</div>
+</div>
+<div class="letter">
+  <div class="letter-title">💌 Open when you’re mad at me.</div>
+  <div class="letter-content">First: I’m sorry. Second: Let’s talk—I’ll listen. ❤️</div>
+</div>
+<div class="letter">
+  <div class="letter-title">💌 Open when you can’t decide what to eat.</div>
+  <div class="letter-content">Order sweets. Life’s too short for hangry love. 🍬</div>
+</div>
+<div class="letter">
+  <div class="letter-title">💌 Open when you doubt my love.</div>
+  <div class="letter-content">Let me remind you: I choose you every day. Not out of habit, but because my soul refuses to settle for less. 💖</div>
+</div>
+<div class="letter">
+  <div class="letter-title">💌 Open when you miss me terribly.</div>
+  <div class="letter-content">Close your eyes. Imagine my arms around you. That’s where I’ll always be. 🤗</div>
+</div>
+<div class="letter">
+  <div class="letter-title">💌 Open when you need to feel beautiful.</div>
+  <div class="letter-content">You’re the kind of stunning that poets fail to capture. 💄</div>
+</div>
+<div class="letter">
+  <div class="letter-title">💌 Open when the world feels heavy.</div>
+  <div class="letter-content">You don’t have to be strong today. Just be you. I’ll carry you until you can walk again. 🕊️</div>
+</div>
+<div class="letter">
+  <div class="letter-title">💌 Open when we have our first fight.</div>
+  <div class="letter-content">We’ll disagree, but we’ll never break. I promise to always come back to you. 💌</div>
+</div>
+<div class="letter">
+  <div class="letter-title">💌 Open when you’re stressed about work.</div>
+  <div class="letter-content">Pause. Breathe. Picture us on a beach with margaritas. This too shall pass. 🍹</div>
+</div>
+<div class="letter">
+  <div class="letter-title">💌 Open when you’re sick.</div>
+  <div class="letter-content">I’d trade places with you in a heartbeat. Until then, here’s a virtual bowl of soup and a forehead kiss. 🥣</div>
+</div>
+<div class="letter">
+  <div class="letter-title">💌 Open when you need courage.</div>
+  <div class="letter-content">You’ve survived 100% of your worst days. This? This is nothing. Go slay, my love. 🦸‍♀️</div>
+</div>
+<div class="letter">
+  <div class="letter-title">💌 Open when you wonder why I love you.</div>
+  <div class="letter-content">Let me count the ways… <a href="reasons.html">(check here)</a>. But really? I just do—inexplicably, endlessly. 💘</div>
+</div>
+<div class="letter">
+  <div class="letter-title">💌 Open on a random day.</div>
+  <div class="letter-content">No reason. Just wanted to say: You’re my favorite person in the history of ever. 🥰</div>
+</div>
+  </div>
+
+  <div class="nav-buttons">
+    <a href="index.html">Back to Home 🏠</a>
+    <a href="miss.html">When I Miss You 💗</a>
+    <a href="reasons.html">20 Reasons I Love You 💖</a>
+  </div>
+
+  <script>
+    const letters = document.querySelectorAll('.letter');
+    letters.forEach(letter => {
+      const title = letter.querySelector('.letter-title');
+      title.addEventListener('click', () => {
+        letters.forEach(l => l !== letter && l.classList.remove('active'));
+        letter.classList.toggle('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

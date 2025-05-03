@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello my dear Irene</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Dancing Script', cursive;
+      background-color: #ffdce0; /* Pastel pink */
+      color: #333;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+      color: #bb377d;
+    }
+    h2 {
+      color: #bb377d;
+    }
+    .slideshow {
+      width: 90%;
+      max-width: 600px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    .slideshow img {
+      width: 100%;
+      border-radius: 20px;
+      animation: fade 10s infinite;
+    }
+    @keyframes fade {
+      0%, 100% {opacity: 0;}
+      20%, 80% {opacity: 1;}
+    }
+    .message {
+      margin-top: 2em;
+      font-size: 1.5em;
+      line-height: 1.6;
+      background: rgba(255, 255, 255, 0.3);
+      padding: 1em;
+      border-radius: 20px;
+    }
+    button {
+      margin-top: 2rem;
+      padding: 0.5em 1.5em;
+      font-size: 1.2em;
+      background: #bb377d;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    #ourStoryBtn {
+      display: none;
+    }
+    #content {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <h2>हरे कृष्ण हरे कृष्ण , कृष्ण कृष्ण हरे हरे |<br>
+        हरे राम हरे राम , राम राम हरे हरे ||</h2>
+    <h1>Hello my dear Irene</h1>
+
+    <div class="slideshow">
+      <img src="img/nh.jpg" alt="Memory 1">
+    </div>
+
+    <div class="message">
+      <p>This website is my small way of saying how much you mean to me. Every page here is filled with memories, dreams, and love — just for you. 💕</p>
+    </div>
+
+    <button onclick="revealMessage()">Click if you love me 💖</button>
+    <p id="hiddenMessage" style="display:none; font-size:1.3em; margin-top:1rem;">Hari Bol 🙏🏻🌸<br> I knew it but I love you more ❤️😜😘🤣</p>
+    <a id="ourStoryBtn" href="story.html"><button>Our Story 💌</button></a>
+  </div>
+
+  <script>
+    // Check if the user has already entered the password
+    if(localStorage.getItem("visited") === "true") {
+      document.getElementById('content').style.display = 'block';
+    } else {
+      const password = prompt("Enter the secret password 💌");
+      if (password && password.toLowerCase() === "irene") {
+        document.getElementById('content').style.display = 'block';
+        localStorage.setItem("visited", "true"); // Store that the user has visited
+      } else {
+        document.body.style.background = "#000";
+        document.body.innerHTML = "<h2 style='margin-top: 20%; color: #bb377d;'>Oops! This page is only for her eyes 💖</h2>";
+      }
+    }
+
+    function revealMessage() {
+      document.getElementById('hiddenMessage').style.display = 'block';
+      document.getElementById('ourStoryBtn').style.display = 'inline-block';
+    }
+  </script>
+</body>
+</html>
